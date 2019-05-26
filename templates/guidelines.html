@@ -1,0 +1,82 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block title %}Software Quality Group - Checklist{% endblock %}
+
+{% block content %}
+<section class="parallax parallax-2" style=" background: url({% static 'images/services_bg.jpg' %}) center no-repeat fixed;">
+	<div class="overlay dark-4">
+		<!-- dark overlay [1 to 9 opacity] -->
+	</div>
+	<div class="text-center mt-100 mb-100">
+		<h2 class="fs-40">Guidelines</h2>
+	</div>
+</section>
+
+<!-- Welcome -->
+<section class="p-1">
+	<div class="pt-20 pb-40" style=" background:url({% static 'images/res_bg.jpg' %}) repeat;">
+		<div class="container">
+			<div class="row mt-20">
+				<div class="col-lg-12 gauid_int">
+					<div class="row mt-10 mb-10">
+						<div class="col-md-2 col-sm-3" align="center">
+							<a href="{% static 'documents/checklist/SQLQueryOpt.pdf' %}" target="_blank">
+								<img src="{% static 'images/sql_q_opyi.jpg' %}" class="img-responsive" alt="" style="border: 2px solid #0060aa30;" />
+							</a>
+						</div>
+						<div class="col-md-10 col-sm-9">
+							<div class="mb-10">
+								<h1 class="m-0 fs-25">SQL Query Optimization</h1>
+								<p>NIC is involved in design, development and implementation of various e-governance related applications and services. These applications and services deal with enormous amount of data wherein, database plays a vital role. Storing and retrieving data efficiently determines the quality and standard of the application or service provided. An inefficient query kills the user's time and the applications performance. Query optimization comes into play when the application's performance and response time needs to be improved to enhance the user experience with the application
+									<a href="{% static 'documents/checklist/SQLQueryOpt.pdf' %}" style="color:#0400fb;" target="_blank">
+										Read
+										<span class="word-rotator active1" data-delay="2000">
+											<span class="items" style="top: 0px;">
+												<span>more</span>
+												<span>now</span>
+												<span>more</span>
+											</span>
+										</span>....
+										<i class="glyphicon glyphicon-menu-right fs-12"></i>
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-20">
+				<div class="col-lg-12 gauid_int1">
+					<div class="row mt-10 mb-10">
+						<div class="col-md-2 col-sm-3" align="center">
+							<a href="{% static 'documents/checklist/ScalableApplicationArchitecture_Version1.0.pdf' %}" target="_blank">
+								<img src="{% static 'images/acalable_web_appli.jpg' %}" class="img-responsive" alt="" style="border: 2px solid #0060aa30;" />
+							</a>
+						</div>
+						<div class="col-md-10 col-sm-9">
+							<div class="mb-10">
+								<h1 class="m-0 fs-25">Guidelines on Building Scalable Web Applications</h1>
+								<p>Modern Web Application requirements are driven by the need for a highly scalable and performance centric platform. The non-functional requirements like performance, availability and scalability are as important as functional requirements of the application. This document captures guidelines and best practices for building web scale applications. The document describe the challenges of building scalable applications and recommend architectural designs and techniques that can be employed at both the application and infrastructure levels to meet these challenges.
+									<a href="{% static 'documents/checklist/ScalableApplicationArchitecture_Version1.0.pdf' %}" style="color:#0400fb;" target="_blank">
+										Read
+										<span class="word-rotator active1" data-delay="2000">
+											<span class="items" style="top: 0px;">
+												<span>more</span>
+												<span>now</span>
+												<span>more</span>
+											</span>
+										</span>....
+										<i class="glyphicon glyphicon-menu-right fs-12"></i>
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Welcome -->
+{% endblock %}

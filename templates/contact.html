@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Software Quality Group - Contact{% endblock %}
+{% block slides%}{% endblock %}
+
+{% block content %}
+	<section class="page-header" style="background:url({% static 'images/contact-bg.jpg' %}) center;">
+		<div class="container">
+			<h1 style="color:#fff;">CONTACT</h1>
+		</div>
+	</section>			
+	<section style="background:#f2fbff;">
+		<div class="container">				
+			<div class="row mt-20">
+                <div class="col-md-8 col-sm-6">
+        	        <div class="cont_de">
+						<h3 class="fs-20 mb-0" style="color:#005fd0;">National Informatics Centre</h3>
+                        <hr>
+						<p class="mb-15" style="font-size:1.2em;">Software Quality Group</p>
+						<p class="mb-15" style="font-size:1.2em;">
+							<span style="color:#000;">Shri Pawan Kumar Joshi</span>
+							<br>
+							Deputy Director General
+						</p>
+						<hr>
+						<p>
+						    <span class="block">
+								<strong><i class="fa fa-phone"></i></strong> 
+								<a href="tel:1800-555-1234" style="color:#666;">			
+									+91-11-24305748, +91-11-24305294
+								</a>
+							</span>
+							<span class="block">
+								<strong><i class="fa fa-envelope"></i></strong>
+								<a href="mailto:mail@yourdomain.com" style="color:#666;">
+									support_sqg@nic.in
+								</a>
+							</span>
+							<span class="block">
+								<strong><i class="fa fa-map-marker"></i></strong>
+								&nbsp; National Informatics Centre HQ,<br>
+								&nbsp; &nbsp; &nbsp; &nbsp;CGO Complex, New Delhi, India<br>
+								&nbsp; &nbsp; &nbsp; &nbsp;Pincode:- 110003
+							</span>
+						</p>
+					</div>
+				<div>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.2892852504165!2d77.23383996504978!3d28.591097142705983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2e52043e875%3A0x7e0cf592307508a4!2sNational+Informatics+Centre!5e0!3m2!1sen!2sin!4v1539161697023" width="300" height="150" frameborder="0" style="border:0;" allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<!-- FORM -->
+			<div class="col-md-4 col-sm-6">
+				<div class="contact-over-box">
+					<h3 class="fs-20" style="color:#005fd0;">Feedback</h3>
+					<form action="#" method="post" enctype="multipart/form-data">
+						<fieldset>
+							<input type="hidden" name="action" value="contact_send">
+								<div class="row">
+									<div class="col-md-12 mb-10">
+										<label for="contact:name">Full Name *</label>
+										<input required="" type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+									</div>
+									<div class="col-md-12 mb-10">
+										<label for="contact:email">E-mail Address *</label>
+										<input required="" type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+									</div>
+									<div class="col-md-12 mb-10">
+										<label for="contact:phone">Phone</label>
+										<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+									</div>
+
+									<div class="col-md-12 mb-10">
+										<label for="contact:subject">Subject *</label>
+										<input required="" type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+									</div>
+
+									<div class="col-md-12 mb-10">
+										<label for="contact:message">Message *</label>
+										<textarea required="" maxlength="10000" rows="3" class="form-control" name="contact[message]" id="contact:message"></textarea>
+									</div>
+								</div>
+							</fieldset>
+
+							<div class="row">
+								<div class="col-md-12">
+									<button type="submit" class="btn btn-primary">
+										<i class="fa fa-check"></i> SEND MESSAGE
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- /FORM -->
+			</div>
+		</div>
+	</section>
+{% endblock %}

@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Software Quality Group - Home{% endblock %}
+
+{% block content %}
+	<section class="callout-dark heading-title heading-arrow-bottom color_bg" style=" padding-top:8px;">
+		<div class="container">
+            <div class="text-center">
+				<h2 class="fs-40">We Help Strengthen the Software NIC Builds.</h2>
+			</div>
+		</div>
+	</section>
+
+	<section class="p-0">
+		<div class="row m-0" style="background:#f2fbff;">
+			<!-- LEFT -->
+			<div class="col-md-6 col-sm-6 p-0 m-0">
+				<img class="img-fluid" src="{% static 'images/about_bg-2.jpg' %}" alt="image">
+			</div>
+			<!-- RIGHT -->
+			<div class="col-md-6 col-sm-6 p-0 m-0">
+				<div class="p-40">
+					<h3>About Software Quality Group</h3>
+					<p>Software Quality Group (SQG) was formed as an initiative to build quality software development culture, device best practices and adopt the state of art of technology prevailing the Industry.</p>
+					<div class="row mt-60">
+                        <div class="col-md-6">
+							<div class="heading-title heading-border-bottom heading-color">
+								<h3>Roles</h3>
+							</div>
+							<p>Define Quality Requirements for software/applications developed by NIC</p>
+							<a href="#">
+								Read
+								<!-- /word rotator -->
+								<span class="word-rotator active" data-delay="2000" style="height: 24px;">
+									<span class="items" style="top: 0px;">
+										<span>more</span>
+										<span>now</span>
+										<span>more</span>
+									</span>
+								</span><!-- /word rotator -->
+								<i class="glyphicon glyphicon-menu-right fs-12"></i>
+							</a>
+						</div>
+
+						<div class="col-md-6">
+							<div class="heading-title heading-border-bottom heading-color">
+								<h3>Activities</h3>
+							</div>
+							<p>To Support Software Development, Solution Architecting, Cyber Security, Technical Advisory, etc. </p>
+							<a href="#">
+								Read
+								<!-- /word rotator -->
+								<span class="word-rotator active" data-delay="2000" style="height: 24px;">
+									<span class="items" style="top: 0px;">
+										<span>more</span>
+										<span>now</span>
+										<span>more</span>
+									</span>
+								</span><!-- /word rotator -->
+								<i class="glyphicon glyphicon-menu-right fs-12"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="p-50">
+		<div class="container">				
+			<div class="row m-0">
+				<div class="col-sm-6 col-md-6 col-lg-6">
+					<div class="box-icon box-icon-center">
+						<a class="box-icon-title" href="#">
+							<i class="fa fa-tablet"></i>
+							<h2>Resources - Guidelines</h2>
+						</a>
+						<p class="text-muted">SQL Query Optimization.</p>
+					</div>
+				</div>							
+				<div class="col-sm-6 col-md-6 col-lg-6">
+					<div class="box-icon box-icon-center">
+						<a class="box-icon-title" href="#">
+							<i class="et-document"></i>
+							<h2>Resources - Guidelines</h2>
+						</a>
+						<p class="text-muted">Guidelines on Building Scalable Web Applications.</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6">
+					<div class="box-icon box-icon-center">
+						<a class="box-icon-title" href="#">
+							<i class="et-basket"></i>
+							<h2>Resources - Checklist</h2>
+						</a>
+						<p class="text-muted">Quality Assurance Checklist.</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6">
+					<div class="box-icon box-icon-center">
+						<a class="box-icon-title" href="#">
+							<i class="et-briefcase"></i>
+							<h2>Resources - Checklist</h2>
+						</a>
+						<p class="text-muted">Software Productization Self-Assessment Checklist.</p>
+					</div>
+				</div>						
+			</div>
+		</div>
+	</section>
+{% endblock %}

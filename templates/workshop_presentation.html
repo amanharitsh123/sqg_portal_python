@@ -1,0 +1,35 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block title %}Software Quality Group - Checklist{% endblock %}
+
+{% block content %}
+<section class="parallax parallax-2" style=" background: url({% static 'images/services_bg.jpg' %}) center no-repeat fixed;">
+	<div class="overlay dark-4">
+		<!-- dark overlay [1 to 9 opacity] -->
+	</div>
+	<div class="text-center mt-100 mb-100">
+		<h2 class="fs-30">Workshops Presentations</h2>
+	</div>
+</section>
+
+<section class="p-1">
+	<div class="pt-20 pb-40" style=" background:url({% static 'images/res_bg.jpg' %}) repeat;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="box-icon box-icon-center box-icon-round box-icon-transparent box-icon-large box-icon-content cont_bg1">
+						<div class="box-icon-title">
+							<i class="b-0 fa fa-cogs" style="background-color:#fff; color:#0ccffb;"></i>
+							<h2>Software Quality Workshop</h2>
+						</div>
+						<p>Quality is never an accident: it is always the result of high intention, sincere effort, intelligent direction and skillful execution. It represents the wise choice of many alternatives.</p>
+						<a class="text-center" href="{% static 'documents/presentations/SoftwareQualityWorkshop-Session1.pdf' %}" target="_blank">
+							<img src="{% static 'images/pdf_download_icons.png' %}" alt="" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

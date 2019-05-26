@@ -1,0 +1,546 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>{% block title %}Software Quality Group{% endblock %}</title>
+		<meta name="description" content="" />	
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />		
+		<!-- CORE CSS -->
+		<link href="{% static 'plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />		
+		<link href="{% static 'plugins/slider.revolution/css/extralayers.css' %}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'plugins/slider.revolution/css/settings.css' %}" rel="stylesheet" type="text/css" />
+		<!-- THEME CSS -->
+		<link href="{% static 'css/essentials.css' %}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'css/layout.css' %}" rel="stylesheet" type="text/css" />
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="{% static 'css/header-1.css' %}" rel="stylesheet" type="text/css" />
+		<link href="{% static 'css/color_scheme/green.css' %}" rel="stylesheet" type="text/css" id="color_scheme" />
+	</head>
+	
+	<body class="smoothscroll enable-animation">		
+		<!-- wrapper -->
+		<div id="wrapper">
+			{% block topbar %}
+				<div id="topBar" class="dark color_bg">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<div id="google_translate_element" style="display:none;"></div>
+								<ul class="top-links list-inline pull-right lang_a">
+									<li><a class="skip_c">Skip to Content</a></li>					
+									<li><a href="#" data-toggle="modal" data-target=".bs-example-modal-full" data-backdrop="false">Sign In</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endblock %}
+
+			{% block header %}
+			<div id="header" class="navbar-toggleable-md sticky clearfix">
+					<header id="topNav">
+						<div class="container-fluid">
+							<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+								<i class="fa fa-bars"></i>
+							</button>
+									
+							<ul class="float-right nav nav-pills nav-second-main">
+								<li class="search">
+									<a href="javascript:;">
+										<i class="fa fa-search"></i>
+									</a>
+										
+									<div class="search-box">
+										<form action="#" method="get">
+											<div class="input-group">
+												<input type="text" name="src" placeholder="Search" class="form-control" />
+												<span class="input-group-btn">
+													<button class="btn btn-primary" type="submit">Search</button>
+												</span>
+											</div>
+										</form>
+									</div> 
+								</li>
+								<!-- /SEARCH -->
+							</ul>
+			
+							<a class="logo float-left" href="index">
+								<img src="{% static 'images/logo.png' %}" alt="" />
+							</a>
+								
+							<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+								<nav class="nav-main">
+									<ul id="topMain" class="nav nav-pills nav-main">				
+										<li><a href="index">HOME</a></li>
+										<li><a href="#">VISION & MISSION</a></li>
+										<li class="dropdown active"><a href="#" class="dropdown-toggle">USEFUL LINKS</a>
+											<ul class="dropdown-menu has-topBar">
+												<li><a href="https://web.guidelines.gov.in" data-confirm="You are taken out of Software Quality Group Portal." target = "_blank">Guidelines for Indian Government Websites</a></li>
+												<li><a href="https://iso25000.com/index.php/en/iso-25000-standards/iso-25010" data-confirm="You are taken out of Software Quality Group Portal." target="_blank">ISO 25010</a></li>
+												<li><a href="https://meity.gov.in/content/stqc" data-confirm="You are taken out of Software Quality Group Portal." target="_blank">STQC</a></li>
+											</ul>
+										</li>
+										<li><a href="contact">CONTACT US</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</header>
+				</div>
+			{% endblock %}
+
+			{% block slides %}
+			<div class="row slide_c">
+					<div class="col-md-12">
+						<div class="slider fullwidthbanner-container roundedcorners">
+							<div class="fullwidthbanner" data-height="600" data-shadow="0" data-navigationStyle="preview2">
+								<ul class="hide">
+									<li data-transition="random" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide 1">
+										<img src="#" data-lazyload="{% static 'images/audit_banner.jpg' %}" alt="" data-bgfit="cover" data-bgposition="center bottom" data-bgrepeat="no-repeat" />
+									</li>
+									<li data-transition="random" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide 3">
+										<img src="#" data-lazyload="{% static 'images/crross_banner.jpg' %}" alt="" data-bgfit="cover" data-bgposition="center bottom" data-bgrepeat="no-repeat" />
+									</li>
+									<li data-transition="random" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide 2">
+										<img src="#" data-lazyload="{% static 'images/sql_optimization.jpg' %}" alt="" data-bgfit="cover" data-bgposition="center bottom" data-bgrepeat="no-repeat" />
+									</li>
+									<li data-transition="random" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide 4">
+										<img src="#" data-lazyload="{% static 'images/slide_3.jpg' %}" alt="" data-bgfit="cover" data-bgposition="center bottom" data-bgrepeat="no-repeat" />
+									</li>
+								</ul>
+								<div class="tp-bannertimer">
+									<!-- progress bar -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endblock %}
+
+			{% block content %}
+			{% endblock %}
+
+			{% block nic_services %}
+			<section class="section-xs" >
+					<div class="container">
+						<div class="text-center">
+							<div class="owl-carousel m-0" data-plugin-options='{"singleItem": false, "autoPlay": 3000, "navigation": false, "pagination": true, "transitionStyle":"goRight"}'>
+								<div class="n_services">
+									<a href="http://mail.gov.in" data-confirm="You are taken out of Software Quality Group Portal." target="_blank">
+										<img class="img-fluid" src="{% static 'images/n_services/messaging.png' %}" alt="">
+										<h3>Messaging</h3>
+									</a>
+								</div>
+								<div class="n_services">
+									<a href="https://bharatmaps.gov.in/" data-confirm="You are taken out of Software Quality Group Portal." target="_blank">
+										<img class="img-fluid" src="{% static 'images/n_services/gis-1.png' %}" alt="">
+										<h3>Remote Sensing & GIS</h3>
+									</a>
+								</div>
+								<div class="n_services">
+									<a href="http://inoc.nic.in/" data-confirm="You are taken out of Software Quality Group Portal." target="_blank">
+										<img class="img-fluid" src="{% static 'images/n_services/network-icon.png' %}" alt="">
+										<h3>Integrated Network Operations</h3>
+									</a>
+								</div>
+									<div class="n_services">
+									<a href="http://nipccd-elearning.wcd.nic.in/" data-confirm="You are taken out of Software Quality Group Portal." target="_blank">
+										<img class="img-fluid" src="{% static 'images/n_services/learning.png' %}" alt="">
+										<h3>e-Learning</h3>
+									</a>
+								</div>	
+								<div class="n_services">
+									<a href="https://servicedesk.nic.in/" data-confirm="You are taken out of Software Quality Group Portal." target="_blank">
+										<img class="img-fluid" src="{% static 'images/n_services/service-center.png' %}" alt="">
+										<h3>NIC Service Desk</h3>
+									</a>
+								</div>	
+								<div class="n_services">
+									<a href="http://webcast.gov.in/webcast.html" data-confirm="You are taken out of Software Quality Group Portal." target="_blank">
+										<img class="img-fluid" src="{% static 'images/n_services/webcast-3.png' %}" alt="">
+										<h3>Webcast</h3>
+									</a>
+								</div>
+								<div class="n_services">
+									<a href="http://vidcon.nic.in" data-confirm="You are taken out of Software Quality Group Portal." target="_blank">
+										<img class="img-fluid" src="{% static 'images/n_services/video.png' %}" alt="">
+										<h3>Video Conferencing</h3>
+									</a>
+								</div>
+								<div class="n_services">
+									<a href="https://registry.gov.in" data-confirm="You are taken out of Software Quality Group Portal." target="_blank">
+										<img class="img-fluid" src="{% static 'images/n_services/domain-2.png' %}" alt="">
+										<h3>Domain Registration</h3>
+									</a>
+								</div>
+								<div class="n_services">
+									<a href="http://nkn.gov.in" data-confirm="You are taken out of Software Quality Group Portal." target="_blank">
+										<img class="img-fluid" src="{% static 'images/n_services/cloud1.png' %}" alt="">
+										<h3>National Knowledge Network</h3>
+									</a>
+								</div>
+								<div class="n_services">
+									<a href="https://cloud.gov.in/" data-confirm="You are taken out of Software Quality Group Portal." target="_blank">
+										<img class="img-fluid" src="{% static 'images/n_services/gov-cloud-1.png' %}" alt="">
+										<h3>Government Cloud</h3>
+									</a>
+								</div>
+								<div class="n_services">
+									<a href="http://datacentres.nic.in/" data-confirm="You are taken out of Software Quality Group Portal." target="_blank">
+										<img class="img-fluid" src="{% static 'images/n_services/data-center-3.png' %}" alt="">
+										<h3>Data Centre</h3>
+									</a>
+								</div>
+								<div class="n_services">
+									<a href="https://security.nic.in/" data-confirm="You are taken out of Software Quality Group Portal." target="_blank">
+										<img class="img-fluid" src="{% static 'images/n_services/cyber.png' %}" alt="">
+										<h3>Cyber Security</h3>
+									</a>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</section>
+			{% endblock %}
+
+			{% block footer %}
+			<footer id="footer">
+					<div class="footer_bg">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-3">
+									<!-- Links -->
+									<h5 class="letter-spacing-1">EXPLORE SQG</h5>
+									<ul class="footer-links list-unstyled footer-sqg">
+										<li><a href="#">Home</a></li>
+										<li><a href="#">Vision and Mission</a></li>
+										<li><a href="#">Guidelines for Indian Government</a></li>
+										<li><a href="#">ISO 25010</a></li>
+										<li><a href="#">STQC</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3">
+									<!-- Links -->
+									<h5 class="letter-spacing-1">RESOURCES</h5>
+									<ul class="footer-links list-unstyled footer-sqg">
+										<li><a href="#">Guidelines</a></li>
+										<li><a href="#">Best Practices</a></li>
+										<li><a href="#">Checklists</a></li>
+										<li><a href="#">Case Study</a></li>                                    
+									</ul>
+								</div>
+								<div class="col-md-3">
+									<!-- Links -->
+									<h5 class="letter-spacing-1">SERVICES</h5>
+									<ul class="footer-links list-unstyled footer-sqg">
+										<li><a href="#">Quality Assurance Audit</a></li>
+										<li><a href="#">Quality Inspect</a></li>
+										<li><a href="#">Tool Analysis</a></li>						
+									</ul>
+								</div>
+			
+								<div class="col-md-3"><!-- Contact Address -->
+									<address>
+										<ul class="list-unstyled">
+											<li class="footer-sprite address">
+												National Informatics Centre HQ<br>
+												CGO Complex, New Delhi, India<br>
+												Pincode:- 110003<br>
+											</li>
+											<li class="footer-sprite phone">
+												+91-11-24305748<br>+91-11-24305294
+											</li>
+											<li class="footer-sprite email">
+												<a href="mailto:#">support_sqg@nic.in</a>
+											</li>
+										</ul>
+									</address>
+									<!-- /Contact Address -->
+						
+									<div class="mt-20">
+										<a href="#" class="social-icon social-icon-border social-facebook float-left" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+											<i class="icon-facebook"></i>
+											<i class="icon-facebook"></i>
+										</a>
+										<a href="#" class="social-icon social-icon-border social-twitter float-left" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+											<i class="icon-twitter"></i>
+											<i class="icon-twitter"></i>
+										</a>
+										<a href="#" class="social-icon social-icon-border social-gplus float-left" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google plus">
+											<i class="icon-gplus"></i>
+											<i class="icon-gplus"></i>
+										</a>
+										<a href="#" class="social-icon social-icon-border social-linkedin float-left" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
+											<i class="icon-linkedin"></i>
+											<i class="icon-linkedin"></i>
+										</a>
+										<a href="#" class="social-icon social-icon-border social-rss float-left" data-toggle="tooltip" data-placement="top" title="" data-original-title="Rss">
+											<i class="icon-rss"></i>
+											<i class="icon-rss"></i>
+										</a>
+									</div>
+								</div>	
+							</div>
+						</div>
+			
+						<div class="container">
+							<div class="text-center mt-20">
+								<div class="owl-carousel m-0" data-plugin-options='{"singleItem": false, "autoPlay": 4000, "navigation": false, "pagination": false, "transitionStyle":"goRight"}'>
+									<div class="client-logo">
+										<a href="https://www.digitalindia.gov.in/" data-confirm="This link will take you out of Software Quality Group (SQG)." target="_blank">
+											<img src="{% static 'images/logos/dgindia-logo.jpg' %}" alt="" />
+										</a>
+									</div>
+									<div class="client-logo">
+										<a href="https://data.gov.in/" data-confirm="This link will take you out of Software Quality Group (SQG)." target="_blank">
+											<img src="{% static 'images/logos/data_gov_logo.jpg' %}" alt="" />
+										</a>
+									</div>
+									<div class="client-logo">
+										<a href="http://swachhbharatmission.gov.in" data-confirm="This link will take you out of Software Quality Group (SQG)." target="_blank">
+											<img src="{% static 'images/logos/swechh_bharat_logo.jpg' %}" alt="" />
+										</a>
+									</div>
+									<div class="client-logo">
+										<a href="http://www.makeinindia.com" data-confirm="This link will take you out of Software Quality Group (SQG)." target="_blank">
+											<img src="{% static 'images/logos/makein_india_logo.jpg' %}" alt="" />
+										</a>
+									</div>
+									<div class="client-logo">
+										<a href="https://www.digitalindia.gov.in/" data-confirm="This link will take you out of Software Quality Group (SQG)." target="_blank">
+											<img src="{% static 'images/logos/dgindia-logo.jpg' %}" alt="" />
+										</a>
+									</div>
+									<div class="client-logo">
+										<a href="https://data.gov.in/" data-confirm="This link will take you out of Software Quality Group (SQG)." target="_blank">
+											<img src="{% static 'images/logos/data_gov_logo.jpg' %}" alt="" />
+										</a>
+									</div>
+									<div class="client-logo">
+										<a href="http://swachhbharatmission.gov.in" data-confirm="This link will take you out of Software Quality Group (SQG)." target="_blank">
+											<img src="{% static 'images/logos/swechh_bharat_logo.jpg' %}" alt="" />
+										</a>
+									</div>
+									<div class="client-logo">
+										<a href="http://www.makeinindia.com" data-confirm="This link will take you out of Software Quality Group (SQG)." target="_blank">
+											<img src="{% static 'images/logos/makein_india_logo.jpg' %}" alt="" />
+										</a>
+									</div>
+									<div class="client-logo">
+										<a href="https://www.nic.in/" data-confirm="This link will take you out of Software Quality Group (SQG)." target="_blank">
+											<img src="{% static 'images/logos/nic_logo1.jpg' %}" alt="" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			
+					<div class="copyright">
+						<div class="container">
+							<ul class="float-right m-0 list-inline mobile-block">
+								<li>Ministry of Electronics & Information Technology, <span>Government of India.</span></span></li>
+							</ul>
+							This site is designed, developed, hosted and maintained by <span>National Informatics Centre</span>
+						</div>
+					</div>
+				</footer>
+			{% endblock %}
+			
+			{% block chatbot %}
+			<div class="chatfield">
+					<div class="upper1">
+						<ul>
+							<li><img src="{% static 'images/user_img.jpg' %}" alt="user name" /></li>
+							<li>
+								<label>Mr. Shubham</label>
+								<span>Active</span>
+							</li>
+							<li class="arrow1"><a class="chat_hide"><i class="fa fa-arrow-circle-down"></i></a></li>
+						</ul>
+					</div>
+					<div class="chat_body">
+						<div class="admin_chat_area">
+							<label>Hi can i help you....</label>
+						</div>
+						<div class="member_chat_area">
+							<label>hello....</label>
+						</div>
+						<div class="admin_chat_area">
+							<label>Hi can i help you....</label>
+						</div>
+						<div class="member_chat_area">
+							<label>hello....</label>
+						</div>
+						<div class="admin_chat_area">
+							<label>Hi can i help you....</label>
+						</div>
+						<div class="member_chat_area">
+							<label>hello....</label>
+						</div>
+					</div>
+					<div class="bot1">
+						<ul>
+							<li><textarea placeholder="Write a reply…"></textarea></li>
+							<li style="float:right;"><a><img src="{% static 'images/send.png' %}" alt="chat send" /></a></li>
+						</ul>
+					</div>	
+				</div>
+				<div class="chatbox">
+					<img src="{% static 'images/live-chat.png' %}" alt="chat" />
+				</div>
+			{% endblock %}
+
+			{% block login %}
+			<div class="container">
+					<div class="modal fade bs-example-modal-full" id = "myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-full" style=" background:url({% static 'images/login-bg.jpg' %}); border-radius: 10px;">
+							<div class="modal-content" style="margin-top:97px; border-radius: 8px;">
+								<div class="modal-header">
+									<h4 class="modal-title" id="myLargeModalLabel">Why Software Quality ?
+										<button type="button" aria-label="Close" data-dismiss="modal" class="close"><span aria-hidden="true">&times;</span></button>
+									</h4>
+								</div>
+								<!-- body modal -->
+								<div class="modal-body">
+									<div class="row">
+										<div class="col-sm-3 col-sm-push-9">			
+											<!-- login form -->
+											<form action="index-2.html"  method="post" class="sky-form boxed">
+												<header><i class="fa fa-users"></i> Sign In</header>
+												<fieldset class="m-0">	
+													<label class="sqg_log mt-20">Username</label>
+													<label class="input">
+														<i class="ico-append fa fa-envelope"></i>
+														<input type="email">
+														<span class="tooltip tooltip-top-right">Type your Username</span>
+													</label>							
+													<label class="sqg_log mt-20">Password</label>
+													<label class="input">
+														<i class="ico-append fa fa-lock"></i>
+														<input type="password">
+														<b class="tooltip tooltip-top-right">Type your Password</b>
+													</label>
+													<div class="row">
+														<div class="col-md-6">
+															<label class="sqg_log mt-20">Captcha</label>
+															<label class="input">
+																<input type="text" placeholder="AQ1g73">
+															</label>
+														</div>
+														<div class="col col-md-6">
+															<label class="sqg_log mt-20">Type Captcha Here....</label>
+															<label class="input">
+																<input type="text" >
+															</label>
+														</div>
+													</div>
+												</fieldset>
+												<footer class="celarfix">
+													<button type="submit" class="btn btn-primary rad-0 float-right"><i class="fa fa-check"></i>SIGN IN</button>
+													<div class="login-forgot-password float-left">
+														<a href="#" style="color:#005fd0;">Forgot password?</a>
+													</div>
+												</footer>
+											</form>
+											<!-- /login form -->
+									</div>
+									<div class="col-sm-9 col-sm-pull-3">
+										<p>Software Quality Group (SQG) was formed as an initiative to build quality software development culture, device best practices and adopt the state of art of technology prevailing the Industry. Prepare best practice for various stages of Software development in line with DevOps</p>
+			
+										<ul class="list-unstyled login-features">
+											<li>
+												<i class="fa fa-slack"></i> <strong>Functional</strong>
+											</li>
+											<li>
+												<i class="fa fa-cog"></i> 
+												<strong>Automation</strong>
+											</li>
+											<li>
+												<i class="fa fa-tachometer"></i> <strong>Performance</strong>
+											</li>
+											<li>
+												<i class="fa fa-lock"></i> 
+												<strong>Security</strong>
+											</li>
+										</ul>
+									</div>
+									</div>
+								</div>			
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endblock %}
+	</div>
+	<!-- /wrapper -->
+	<!-- SCROLL TO TOP -->
+	<a href="#" id="toTop"></a>
+	<!-- PRELOADER -->
+	<div id="preloader">
+		<div class="inner">
+			<span class="loader"></span>
+		</div>
+	</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = '{% static "plugins/" %}';</script>
+		<script type="text/javascript" src="{% static 'plugins/jquery/jquery-2.2.3.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/jquery.validate.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/additional-methods.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>		
+		<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+		<script type="text/javascript" src="{% static 'plugins/slider.revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'plugins/slider.revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/view/demo.revolution_slider.js' %}"></script>
+
+		<script>
+			$(document).ready(function(){
+				$(".chatbox").hide();
+				$(".chatbox").click(function(){
+					$(".chatfield").show();
+					$(".chatbox").hide();
+				});
+				
+				$(".chat_hide").click(function(){
+					$(".chatfield").hide();
+					$(".chatbox").show();
+				});
+			});
+		</script>	
+			
+		<script>
+			$(document).ready(function(){
+				$(document).on('click', ':not(form)[data-confirm]', function(e){
+					if(!confirm($(this).data('confirm'))){
+						e.stopImmediatePropagation();
+				  		e.preventDefault();
+					}
+				});
+			
+				$(".skip_c").click(function(){
+					$(".slide_c").slideUp("slow");
+				});
+			
+			 	$(".color_pic1").click(function(){
+					$(".color_bg").css("background-color", "#999999");
+				});
+			
+				$(".color_pic2").click(function(){
+					$(".color_bg").css("background-color", "#252525");
+				});
+				
+				$(".color_pic3").click(function(){
+					$(".color_bg").css("background-color", "#3366CC");
+				});
+				
+				$(".color_pic4").click(function(){
+					$(".color_bg").css("background-color", "#330066");
+				});	
+			});
+		</script>
+	</body>
+</html>

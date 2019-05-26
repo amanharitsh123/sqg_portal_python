@@ -1,0 +1,151 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block title %}Software Quality Group - Dashboard{% endblock %}
+
+{% block content %}
+		<section class="parallax parallax-2" style=" background: url({% static 'images/services_bg.jpg' %}) center no-repeat fixed;">
+				<div class="overlay dark-4"><!-- dark overlay [1 to 9 opacity] --></div>
+				<div class="container mb-40 mt-20">
+						<div class="text-center mb-20">
+								<h2 class="fs-30">Services</h2>
+						</div>	
+						<div class="row">
+								<div class="col-md-3 col-6">
+										<div class="text-center">
+												<i class="ico-light ico-lg ico-rounded ico-hover fa fa-slack"></i>
+												<h4>Functional</h4>
+										</div>
+								</div>
+								<div class="col-md-3 col-6">
+										<div class="text-center">
+												<i class="ico-light ico-lg ico-rounded ico-hover fa fa-cog fa-spin"></i>
+												<h4>Automation</h4>
+										</div>
+								</div>
+								<div class="col-md-3 col-6">
+										<div class="text-center">
+												<i class="ico-light ico-lg ico-rounded ico-hover fa fa-tachometer secoo "></i>
+												<h4>Performance</h4>
+										</div>
+								</div>
+								<div class="col-md-3 col-6">
+										<div class="text-center">
+												<i class="ico-light ico-lg ico-rounded ico-hover fa fa-lock"></i>
+												<h4>Security</h4>
+										</div>
+								</div>
+						</div>
+				</div>
+		</section>
+		
+		<!-- Welcome -->
+		<section class="p-1" >
+				<div class="pt-20 pb-40" style=" background:url({% static 'images/res_bg.jpg' %}) repeat;">
+						<div class="container">
+            		<div class="text-center"><h2>Resources</h2></div>
+								<div class="row">
+										<!-- item -->
+										<div class="col-md-3 col-sm-6">
+												<div class="box-flip box-color box-icon box-icon-center box-icon-round box-icon-large text-center box-flip1">
+														<div class="front">
+																<div class="box1 box-default">
+																		<div class="box-icon-title">
+																				<img class="img-fluid" src="{% static 'images/white_paper.jpg' %}" alt="">
+																				<h2>Guidelines</h2>
+																		</div>
+																</div>
+														</div>
+														<div class="back">
+																<div class="box2 box-default">
+																		<h4 class="m-0">Guidelines</h4>
+																		<small>SQG</small>
+																		<hr>
+																		<p>SQG Guidelines are designed to share our extensive research experience and knowledge with SQG employees</p>
+																		<hr>
+																		<a href="page-careers.html" class="btn btn-default btn-lg mt-30">Readmore</a>
+																</div>
+														</div>
+												</div>
+										</div>
+										<!-- /item -->
+
+										<!-- item -->
+										<div class="col-md-3 col-sm-6">
+												<div class="box-flip box-color box-icon box-icon-center box-icon-round box-icon-large text-center box-flip2">
+														<div class="front">
+																<div class="box1 box-default">
+																		<div class="box-icon-title">
+																				<img class="img-fluid" src="{% static 'images/publications.jpg' %}" alt="">
+																				<h2>Best Practices</h2>
+																		</div>
+																</div>
+														</div>
+														<div class="back">
+																<div class="box2 box-default">
+																		<h4 class="m-0">Best Practices</h4>
+																		<small>SQG</small>
+																		<hr>
+																		<p>SQG Best Practices are designed to share our extensive research experience and knowledge with SQG employees</p>
+																		<hr>
+																		<a href="page-careers.html" class="btn btn-default btn-lg mt-30">Readmore</a>
+																</div>
+														</div>
+												</div>
+										</div>
+										<!-- /item -->
+
+										<!-- item -->
+										<div class="col-md-3 col-sm-6">
+												<div class="box-flip box-color box-icon box-icon-center box-icon-round box-icon-large text-center box-flip3">
+														<div class="front">
+																<div class="box1 box-default">
+																		<div class="box-icon-title">
+																				<img class="img-fluid" src="{% static 'images/presentation_s.jpg' %}" alt="">
+																				<h2>Checklists</h2>
+																		</div>
+																</div>
+														</div>
+														<div class="back">
+																<div class="box2 box-default">
+																		<h4 class="m-0">Checklists</h4>
+																		<small>SQG</small>
+																		<hr>
+																		<p>SQG Checklists are designed to share our extensive research experience and knowledge with SQG employees</p>
+																		<hr>
+																		<a href="page-careers.html" class="btn btn-default btn-lg mt-30">Readmore</a>
+																</div>
+														</div>
+												</div>
+										</div>
+										<!-- /item -->
+
+										<!-- item -->
+										<div class="col-md-3 col-sm-6">
+												<div class="box-flip box-color box-icon box-icon-center box-icon-round box-icon-large text-center box-flip4" >
+														<div class="front">
+																<div class="box1 box-default">
+																		<div class="box-icon-title">
+																				<img class="img-fluid" src="{% static 'images/case_s.jpg' %}" alt="">
+																				<h2>Case Studies</h2>
+																		</div>
+																</div>
+														</div>
+														<div class="back">
+																<div class="box2 box-default">
+																		<h4 class="m-0">Case Studies</h4>
+																		<small>SQG</small>
+																		<hr>
+																		<p>SQG Case Studies are designed to share our extensive research experience and knowledge with SQG employees</p>
+																		<hr>
+																		<a href="page-careers.html" class="btn btn-default btn-lg mt-30">Readmore</a>
+																</div>
+														</div>
+												</div>
+										</div>
+										<!-- /item --> 
+								</div>
+						</div>
+				</div>
+		</section>
+		<!-- Welcome -->
+{% endblock %}	
