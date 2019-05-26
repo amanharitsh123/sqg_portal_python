@@ -126,4 +126,4 @@ STATIC_URL = '/static/' # The name to refer the static files
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'assets'),    # Path to find all static files
 ]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
