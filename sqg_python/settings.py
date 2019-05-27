@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'sqg_python.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'quality_leads',
+        'NAME': 'sqg_nic',
         'USER': 'sandeep',
         'PASSWORD': 'sandeep',
         'HOST': 'localhost',
