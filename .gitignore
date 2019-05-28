@@ -1,0 +1,5 @@
+# Don't track the below content
+assets/admin/
+quality_leads/__pycache__
+quality_leads/migrations/__pycache__
+sqg_python/__pycache__
