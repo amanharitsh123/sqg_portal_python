@@ -5,6 +5,9 @@ from django.core.mail import send_mail
 def index(request):
     return render(request, 'index.html')
 
+def index2(request):
+    return render(request, 'index2.html')
+
 def contact(request):
     return render(request, 'contact.html')
 

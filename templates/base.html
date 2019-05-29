@@ -41,61 +41,53 @@
 
 		{% block header %}
 		<div id="header" class="navbar-toggleable-md sticky clearfix">
-			<header id="topNav">
-				<div class="container-fluid">
-					<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+					<header id="topNav">
+					<div class="container-fluid">
+
+					<!--<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
 						<i class="fa fa-bars"></i>
-					</button>
+					</button>-->
 
-					<ul class="float-right nav nav-pills nav-second-main">
-						<li class="search">
-							<a href="javascript:;">
-								<i class="fa fa-search"></i>
-							</a>
+						<!--<ul class="float-right nav nav-pills nav-second-main">
+                         <li class="search">
+								<a href="javascript:;">
+									<i class="fa fa-search"></i>
+								</a>
 
-							<div class="search-box">
-								<form action="#" method="get">
-									<div class="input-group">
-										<input type="text" name="src" placeholder="Search" class="form-control" />
-										<span class="input-group-btn">
-											<button class="btn btn-primary" type="submit">Search</button>
-										</span>
-									</div>
-								</form>
+
+							</li>
+                        </ul> -->
+						<div class="row">
+							<div class="col-md-3 float-left">
+								<a class="logo" href="index.html">
+									<img src="{% static 'images/logos/logo.png' %}" alt="">
+								</a>
 							</div>
-						</li>
-						<!-- /SEARCH -->
-					</ul>
-
-					<a class="logo float-left" href="index">
-						<img src="{% static 'images/logo.png' %}" alt="" />
-					</a>
-
-					<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
-						<nav class="nav-main">
-							<ul id="topMain" class="nav nav-pills nav-main">
-								<li><a href="index">HOME</a></li>
-								<li><a href="#">VISION & MISSION</a></li>
-								<li class="dropdown active"><a href="#" class="dropdown-toggle">USEFUL LINKS</a>
-									<ul class="dropdown-menu has-topBar">
-										<li><a href="https://web.guidelines.gov.in"
-												data-confirm="You are taken out of Software Quality Group Portal."
-												target="_blank">Guidelines for Indian Government Websites</a></li>
-										<li><a href="https://iso25000.com/index.php/en/iso-25000-standards/iso-25010"
-												data-confirm="You are taken out of Software Quality Group Portal."
-												target="_blank">ISO 25010</a></li>
-										<li><a href="https://meity.gov.in/content/stqc"
-												data-confirm="You are taken out of Software Quality Group Portal."
-												target="_blank">STQC</a></li>
+							<div class="col-md-6" style="text-align: center;">
+								<nav class="nav-main">
+									<ul id="topMain" class="nav nav-pills nav-main"><li><a href="index.html">HOME</a></li>
+										<li><a href="#">VISION & MISSION</a></li>
+										<li class="dropdown active"><a href="#" class="dropdown-toggle">USEFUL LINKS</a>
+										<ul class="dropdown-menu has-topBar">
+										<li><a href="https://web.guidelines.gov.in" data-confirm="You are taken out of Software Quality Group Portal." target = "_blank">Guidelines for Indian Government Websites</a></li>
+										<li><a href="https://iso25000.com/index.php/en/iso-25000-standards/iso-25010" data-confirm="You are taken out of Software Quality Group Portal." target="_blank">ISO 25010</a></li>
+										<li><a href="https://meity.gov.in/content/stqc" data-confirm="You are taken out of Software Quality Group Portal." target="_blank">STQC</a></li>
+										</ul>
+										</li>
+										<li><a href="contact.html">CONTACT US</a></li>
 									</ul>
-								</li>
-								<li><a href="contact">CONTACT US</a></li>
-							</ul>
-						</nav>
+								</nav>
+							</div>
+							<div class="col-md-3 float-right" style="padding-right: 20px;">
+								<a class="logo" href="https://www.nic.in/">
+									<img src="{% static 'images/logos/nic_logo1.png' %}" alt="">
+								</a>
+							</div>
+						</div>
 					</div>
-				</div>
-			</header>
-		</div>
+					</header>
+
+			</div>
 		{% endblock %}
 
 		{% block slides %}
@@ -466,7 +458,7 @@
 							<div class="row">
 								<div class="col-sm-3 col-sm-push-9">
 									<!-- login form -->
-									<form action="index-2.html" method="post" class="sky-form boxed">
+									<form action="index2" method="post" class="sky-form boxed">
 										<header><i class="fa fa-users"></i> Sign In</header>
 										<fieldset class="m-0">
 											<label class="sqg_log mt-20">Username</label>
