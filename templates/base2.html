@@ -2,14 +2,17 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>{% block title %}Software Quality Group{% endblock %}</title>
+		<title>Software Quality Group</title>
 		<meta name="description" content="" />
-		<meta name="Author" content="Software Quality Group NIC" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
 		<!-- mobile settings -->
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
 		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+		
 		<!-- CORE CSS -->
 		<link href="{% static 'plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+		
 		<link href="{% static 'plugins/slider.revolution/css/extralayers.css' %}" rel="stylesheet" type="text/css" />
 		<link href="{% static 'plugins/slider.revolution/css/settings.css' %}" rel="stylesheet" type="text/css" />
 		<!-- THEME CSS -->
@@ -25,20 +28,46 @@
 		<!-- wrapper -->
 		<div id="wrapper">
             {% block topbar %}
-                <div id="topBar" class="dark color_bg">
-				    <div class="container-fluid">
-				        <div class="row">
-				            <div class="col-md-12">
-				                <div id="google_translate_element" style="display:none;"></div>
-					            <ul class="top-links list-inline pull-right lang_a">
-					                <li><a href="index" class="skip_c">Home</a></li>
-                                    <li><a class="skip_c">Skip to Content</a></li>
-					                <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-full" data-backdrop="false">Sign Out</a></li>
-					            </ul>				
-				            </div>
-                        </div>
-			        </div>
-                </div>
+            <div id="topBar" class="dark color_bg1">
+				<div class="container-fluid">
+				<div class="row">
+				<div class="col-md-12">
+				<div id="google_translate_element" style="display:none;"></div>
+					<ul class="top-links list-inline pull-right lang_a">
+					<li><a href="index" class="skip_c">Home</a></li>
+					
+					<li><a class="skip_c">Skip to Content</a></li>
+					
+					<!-- (for mobile font li start) -->
+					<!-- <li>
+							<a class="dropdown-toggle no-text-underline" data-toggle="dropdown">Color</a>
+							<ul class="dropdown-menu float-right">
+								<li><a class="color_pic1" style="background:#999999;">&nbsp;</a></li>
+								<li><a class="color_pic2" style="background:#363839;">&nbsp;</a></li>
+								<li><a class="color_pic3" style="background:#3366CC;">&nbsp;</a></li>
+								<li><a class="color_pic4" style="background:#330066;">&nbsp;</a></li>
+							</ul>
+						</li> -->
+						<!--(for mobile font li end)-->
+					
+					<!--(for mobile font li start)-->
+				<!--	<li>
+							<a class="dropdown-toggle no-text-underline" data-toggle="dropdown">Font</a>
+							<ul class="dropdown-menu float-right">
+								<li><a> - A</a></li>
+								<li><a> &nbsp; A</i></a></li>
+								<li><a> + A</i></a></li>
+							</ul>
+						</li> -->
+						<!--(for mobile font li end) -->
+						
+					<li><a href="#" data-toggle="modal" data-target=".bs-example-modal-full" data-backdrop="false">Sign Out</a></li>
+					
+					</ul>
+				
+				 </div>
+              </div>
+			</div>
             {% endblock %}
 
             {% block header %}
@@ -94,7 +123,13 @@
                                             <li><a href="#">DevOps</a></li>    
                                             <li><a href="#">Operating Support</a></li>
                                         </ul>
-                                    </li> 
+                                    </li>
+                                    <li class="dropdown active"><a class="dropdown-toggle" href="#">Quality Leads</a>
+                                        <ul class="dropdown-menu">
+                                        <li><a href="quality-leads-states">State/UTs</a></li>    
+                                        <li><a href="quality-leads-groups">Groups</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>

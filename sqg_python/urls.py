@@ -25,8 +25,9 @@ urlpatterns = [
     path('index2', views.index2, name='index'),
 
 #    path('index2', views.index2, name='index2'),
-#    path('checklist', views.checklist, name='checklist'),
-#    path('guidelines', views.guidelines, name='guidelines'),
-#    path('webinars', views.webinars, name='webinars'),
-#    path('workshops', views.workshops, name='webinars'),
+   path('checklist', views.checklist, name='checklist'),
+   path('guidelines', views.guidelines, name='guidelines'),
+   path('webinars', views.webinars, name='webinars'),
+   path('workshops', views.workshops, name='webinars'),
+   path('quality-leads-states',views.quality_leads_states,name='quality-leads-states')
 ]

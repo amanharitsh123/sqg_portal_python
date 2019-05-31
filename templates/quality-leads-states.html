@@ -1,0 +1,637 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block title %}Software Quality Group - Checklist{% endblock %}
+
+{% block content %}
+<section class="parallax parallax-2" style=" background: url({% static 'images/services_bg.jpg' %}) center no-repeat fixed;">
+    <div class="text-center mt-50 mb-50">
+        <h2 class="fs-40">State/UT Quality Leads</h2>
+    </div>
+</section>
+<section class="p-1">
+	<div class="container"  style="padding-top:20px;">
+		<div class="row">
+			<div class="col-md-4 col-sm-6"></div>
+			<div class="col-md-4 col-sm-6"></div>
+			<!-- List of States Starts Here -->
+			<div class="col-md-4 col-sm-6">
+				<input type="search" id="searchInput" onkeyup="searchFunction()" placeholder="Search by State/UT Name..">
+			</div>
+		</div>
+		<div class="row">
+		<ul id="searchList">
+			<!-- Generating data in lopp -->
+			{% for data in final_data %}
+				<li class="col-md-4 col-sm-6">
+					<div class="panel panel-primary">
+						<div class="panel-heading">{{data.state_name}}</div>
+						<div class="panel-body">
+							<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>{{data.name}}<br>
+							<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>{{data.position}}<br>
+							<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>{{data.email}}<br>
+							<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>{{data.phone}}
+							<hr>						
+							<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>{{data.sio_name}}<br>
+							<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>{{data.sio_email}}
+						</div>
+					</div>
+				</li>
+			{% endfor %}
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Assam</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Tapan Gogoi<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist F<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>tapan.gogoi@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>-
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Suchitra Pyarelal (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Bihar</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Rajiv Ranjan<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-E<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>rajiv.ranjan@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9431602887
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Rajesh Kumar Singh (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Chandigarh</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Rajneesh Verma<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-E<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>rajneesh.verma@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9216422264
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Vivek Verma (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Chhattisgarh</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>A.K. Somasekhar<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-F<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>som@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9425202643
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>D.K. Debnath (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+			
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Dadra And Nagar Haveli</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>Not Recieved
+						<hr>
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Milind Dwarkadhish Talnikar (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>md.talnikar@nic.in
+					</div>
+				</div>
+			</li>
+			
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Daman And Diu</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>Not Recieved
+						<hr>
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Utpal N. Mehta (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>utpal.mehta@nic.in
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Delhi</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Sandeep Jain<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-E<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>sandy@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9810705864
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Dr. Rakesh Gupta (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Goa </div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>J S Rozario<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-E<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>js.rozario@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9420740963
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Prashant Thete (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Gujarat </div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Pankaj K. Pathak<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-E<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>pankaj.pathak@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9429199120
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>P.V. Mohan Krishnan (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Haryana</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Dr Susheel Kumar<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-F<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>susheel.kumar@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9815472266
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Deepak Bansal (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Himachal Pradesh</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Sandeep Kumar<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-E<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>Sandeep.kr@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9816532448
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Ajay Singh Chahal (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Jammu And Kashmir </div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Saleem Khan<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-F<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>saleem.khan@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9419123923
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Abhay Kumar (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+			
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Jharkhand</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>Not Recieved
+						<hr>
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Shahid Ahmed (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>s.ahmad@nic.in
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Karnataka</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>N R Samartharam<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-E<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>samartha@gov.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9663143225
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>B Vinaya (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Kerela</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Beena Jayaprakash<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-E<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>beena.jp@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9447062155
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>T. Mohan Dhas (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+			
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Lakshadweep</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>Not Recieved
+						<hr>
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>P.K. Basheer Ahmed (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>basheer.pka@nic.in
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Madhya Pradesh</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Kamlesh Joshi<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-F<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>joshi.kamlesh@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9425303022
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Prakash Rao (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Maharashtra</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>K. B. Kondekar<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist E<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>kb.kondekar@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9404281845
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Ravi Vijayvargiya (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Manipur </div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>L. Premchandrad Sharma<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-E<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>premchand@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9402880054
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Rajen Singh (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Meghalaya</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Marksman Laurel Nongkhlaw<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist E<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>mark.nongkhlaw@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9862006017
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Timothy Dkhar (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Mizoram</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Mr James Vanlalfakawma<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-B<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>james.v@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9862823593
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>S K Mohapatra (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+			
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Nagaland</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>Not Recieved
+						<hr>
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Hemanta Kumar Saikia (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>asm-hemanta@nic.in
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Odisha</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Dilip Kumar Jena<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-F<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>dk.jena@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9437303211
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Pratibha Singh (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Punjab</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Anil Dogra<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-E<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>anil.dogra@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9417724535
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Satyender Kumar (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Rajasthan</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Lalit Goyal<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-E<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>lalit.goyal@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9928018282
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Tarun Toshniwal (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+			
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Sikkim</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>Not Recieved
+						<hr>
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Birendra Chettri (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>biren@nic.in
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Tamil Nadu</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>K. Parthasarathy<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-F<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>partha.tn@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9445022225
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>K. Srinivasa Raghavan (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+			
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Telangana</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>Not Recieved
+						<hr>
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Dr. A. Rama Mohan Rao (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>arrao@nic.in
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Tripura</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Prabhash Debnath<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist-C<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>prabhash.d@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9436129258
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>CHAYAN KANTI DHAR (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+			
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Uttarakhand</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>Not Recieved
+						<hr>
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>K. Narayanan (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>k.narayan@nic.in
+					</div>
+				</div>
+			</li>
+
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Uttar Pradesh</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Anshu Rohatgi<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist F<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>anshu.rohatgi@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>9415328492
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Saurabh Gupta (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+			
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Uttar Pradesh</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Syad Asim Aftab<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Scientist F<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>sa.aftab@nic.in<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>7351069333
+						<hr>						
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Saurabh Gupta (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>
+					</div>
+				</div>
+			</li>
+			
+			<li class="col-md-4 col-sm-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">West Bengal</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-stats" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>Not Recieved<br>
+						<span class="glyphicon glyphicon-earphone" style="margin-right:10px; color:#337ab7;"></span>Not Recieved
+						<hr>
+						<span class="glyphicon glyphicon-user" style="margin-right:10px; color:#337ab7;"></span>Rizwan Ul Haq Khan (SIO)<br>
+						<span class="glyphicon glyphicon-envelope" style="margin-right:10px; color:#337ab7;"></span>rh.khan@nic.in
+					</div>
+				</div>
+			</li>
+			
+			<!-- List of States End Here -->
+			<li class="col-md-12" id="no-match-found" style="display: none;">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Sorry! No State/UT name matched your query.</div>
+				</div>
+			</li>
+			
+        </div>
+</section>
+<script type="text/javascript">var plugin_path = 'plugins/';</script>
+		<!--<script src="{% static 'plugins/jquery/jquery-3.3.1.min.js' %}"></script>-->
+<script type="text/javascript" src="{% static 'plugins/jquery/jquery-2.2.3.min.js' %}"></script>
+
+		<script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>		
+		<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+		
+        <script type="text/javascript" src="{% static 'plugins/slider.revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'plugins/slider.revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/view/demo.revolution_slider.js' %}"></script>
+		
+		
+
+<script>
+$(document).ready(function(){
+    $(".chatbox").click(function(){
+        $(".chatfield").show();
+		$(".chatbox").hide();
+    });
+	
+$(".chat_hide").click(function(){
+        $(".chatfield").hide();
+		$(".chatbox").show();
+    });
+	
+});
+</script>		
+
+<script>
+$(document).ready(function(){
+$(document).on('click', ':not(form)[data-confirm]', function(e){
+    if(!confirm($(this).data('confirm'))){
+      e.stopImmediatePropagation();
+      e.preventDefault();
+		}
+});
+
+$(".skip_c").click(function(){
+        $(".slide_c").slideUp("slow");
+    });
+
+ $(".color_pic1").click(function(){
+        $(".color_bg").css("background-color", "#999999");
+    });
+
+$(".color_pic2").click(function(){
+        $(".color_bg").css("background-color", "#252525");
+    });
+	
+$(".color_pic3").click(function(){
+        $(".color_bg").css("background-color", "#3366CC");
+    });
+	
+$(".color_pic4").click(function(){
+        $(".color_bg").css("background-color", "#330066");
+    });	
+
+});
+</script>
+
+<script>
+function searchFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue, count, errorMsg;
+  input = document.getElementById('searchInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("searchList");
+  li = ul.getElementsByTagName('li');
+  count = 0;
+  errorMsg = document.getElementById('no-match-found');
+  // Search from the start
+  filterRegExp = '\^' + filter;
+  filterFromStart = new RegExp(filterRegExp, 'i');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByClassName("panel-heading")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+	  count++;
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+  if (count == 0) {
+	errorMsg.style.display = "block";
+  } else {
+	errorMsg.style.display = "none";
+  }
+}
+</script>
+{% endblock %}

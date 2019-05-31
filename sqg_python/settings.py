@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'quality_leads.apps.QualityLeadsConfig',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
